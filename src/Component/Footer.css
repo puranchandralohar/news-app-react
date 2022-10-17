@@ -1,0 +1,33 @@
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+footer {
+    padding: 1.2em;
+    background: #333;
+    color: #eee;
+}
+
+footer p{ 
+    margin:5px;
+    text-align: center;
+}
+
+footer .fa-heart{
+    margin: 0 2px;
+    color:red;
+    animation: blink 0.9s infinite;
+}
+
+@keyframes blink {
+    0%{
+        transform: scale(0.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
