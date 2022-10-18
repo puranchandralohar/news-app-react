@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
+import './DarkMode.css'
 
 export default function NewsData() {
 
@@ -13,14 +14,14 @@ export default function NewsData() {
                 setData([data,...result]);
                 // console.log(result)
             })
-    })
+    },[])
 
 
   return (
    <>
         {data.map((item,index)=>{
                 return(
-                    <div className='articles' key={index}>
+                    <div className='articles' key={index} >
                         <h1>{item.title}</h1>
                         <h3>{item.description}</h3>
                         <img src={item.urlToImage} alt="?" />

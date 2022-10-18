@@ -1,0 +1,33 @@
+.dark {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .light {
+    background-color: #fff;
+    color: #333;
+  }
+
+  .header_light{
+    background-color: #fff;
+    color:#333;
+  }
+
+  .header_dark{
+    background-color: #333;
+  }
+
+  .header_dark a{
+    color:#fff;
+  }
+
+  .themeBtn{
+    margin:10px;
+    padding: 10px;
+    font-size: 18px;
+    border:none;
+    box-shadow: 0 0 4px gray;
+    border-radius: 75% 25%;
+    background:transparent;
+    cursor: pointer;
+  }
