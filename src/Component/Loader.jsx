@@ -3,6 +3,12 @@ import { ThreeDots } from  'react-loader-spinner';
 
 
 export function Loader() {
+
+    const myStyle ={
+        color:"#333",
+        fontSize:"1.5em"
+    }
+
   return (
     <div>
         <ThreeDots 
@@ -15,6 +21,7 @@ export function Loader() {
             wrapperClassName=""
             visible={true}
             />
+        <span style={myStyle}>One Moment Please.....</span>
 
     </div>
   )
