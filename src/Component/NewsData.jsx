@@ -66,10 +66,11 @@ export default function NewsData() {
                             </div>
 
                             <div className="btns">
-                                <div className="like"><i className="fa-solid fa-thumbs-up"></i>8.2k</div>
-                                <div className="dislike"><i className="fa-solid fa-thumbs-down"></i>1.6k</div>
-                                <div className="Comment"><i className="fa-solid fa-comment"></i>365</div>
-                            </div>                        
+                                <div className="like cta_btn"><i className="fa-solid fa-thumbs-up"></i>8.2k</div>
+                                <div className="dislike cta_btn"><i className="fa-solid fa-thumbs-down"></i>1.6k</div>
+                                <div className="Comment cta_btn"><i className="fa-solid fa-comment"></i>365</div>
+                            </div>
+                     
                    </div>
 
                 )

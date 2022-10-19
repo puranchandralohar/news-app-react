@@ -49,3 +49,21 @@
     background: transparent;
     cursor: pointer;
 }
+
+.btns{
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.cta_btn{
+    font-size: 1.2em;
+    cursor: pointer;
+    color:gray;
+}
+
+.fa-thumbs-up:active ,
+.fa-thumbs-down:active,
+.fa-comment:active{
+    color:red;
+}
