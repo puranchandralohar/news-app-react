@@ -1,11 +1,15 @@
 .dark {
-    background-color: #333;
+    background-color: #131417;
     color: #fff;
+  }
+
+  .dark a{
+    color:#ddd;
   }
 
   .light {
     background-color: #fff;
-    color: #333;
+    color: #131417;
   }
 
   .header_light{

@@ -3,15 +3,20 @@ import axios from 'axios';
 import { Loader } from '../Common/Loader';
 import '../Common/DarkMode.css';
 import './Style.css';
+import '../Common/DarkMode.css'
+import { Headlines } from './Headlines';
 
 
 
-export default function NewsData() {
+export default function NewsData(props) {
+    const {handleText,value} = props;
+
+    console.log(value)
 
 
     const [data,setData] = useState([]);
     const [loading, setLoading] = useState(false);
-    const [value, setvalue] = useState()
+
 
     useEffect(()=>{
         axios
@@ -36,7 +41,7 @@ export default function NewsData() {
 
 
   return (
-    <section className='container'>
+    <section className="container">
         <h1>Latest News</h1>
         { !loading ? <Loader/> : ""}
         <div className='articles'>
