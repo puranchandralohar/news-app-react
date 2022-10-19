@@ -6,7 +6,8 @@ import { Link } from 'react-router-dom';
 export function Header() {
 
   const [theme, setTheme] = useState('header_light');
-  const [themeIcon, setThemeIcon] = useState('moon')
+  const [themeIcon, setThemeIcon] = useState('moon');
+  const [value, setvalue] = useState("");
 
 
   const toggleTheme = () => {
@@ -20,6 +21,16 @@ export function Header() {
   };
 
 
+  const handleText = (e)=>{
+    setvalue(e.target.value)
+    console.log(e.target.value)
+  }
+
+  // const searchValue = value;
+
+  // console.log("Search" = searchValue)
+
+
 
   return (
     <header className={"header " + theme}>
@@ -29,9 +40,9 @@ export function Header() {
 
       <nav className="navbar">
         <div className="searchbar">
-          <input type="text" placeholder='Search...' />
+          <input type="text" placeholder='Search...' value={value} onChange={handleText} />
         </div>
-        <button className='themeBtn' onClick={toggleTheme}><i class={"fa-solid fa-"+themeIcon}></i></button>
+        <button className='themeBtn' onClick={toggleTheme}><i className={"fa-solid fa-"+themeIcon}></i></button>
         <ul className="nav">
           <li><Link to="/">Headlines</Link></li> 
           <li><Link to ="/epaper">ePaper</Link></li> 

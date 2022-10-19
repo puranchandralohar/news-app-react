@@ -8,8 +8,10 @@ import './Style.css';
 
 export default function NewsData() {
 
+
     const [data,setData] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [value, setvalue] = useState()
 
     useEffect(()=>{
         axios
@@ -23,10 +25,14 @@ export default function NewsData() {
             })
     },[])
 
-    
 
-
-    
+    //Delete an article
+    function deleteArticle(index) {
+        const newData = data.filter((ele, id) => {
+            return index !== id;
+        });
+        setData(newData);
+    }
 
 
   return (
@@ -38,6 +44,9 @@ export default function NewsData() {
         {data.map((item,index)=>{
                 return(
                     <div className='article' key={index} >
+                            <button className='delete_btn' onClick={()=>deleteArticle(index)}>
+                                <i className="fa-solid fa-delete-left"></i>
+                            </button>
                             
                             <div className="article_image">
                                 <img src={item.urlToImage} alt="" />
@@ -51,19 +60,15 @@ export default function NewsData() {
                                 <p>{item.description}</p>
                             </div>
 
-                            {/* <div className="content">
-                                <p>{item.content}</p>
-                            </div> */}
-                            
                             <div className="article_details">
                                 <p>{item.author}</p>
                                 <p>{item.publishedAt}</p>
                             </div>
 
                             <div className="btns">
-                                <div className="like"><i class="fa-solid fa-thumbs-up"></i>8.2k</div>
-                                <div className="dislike"><i class="fa-solid fa-thumbs-down"></i>1.6k</div>
-                                <div className="Comment"><i class="fa-solid fa-comment"></i>365</div>
+                                <div className="like"><i className="fa-solid fa-thumbs-up"></i>8.2k</div>
+                                <div className="dislike"><i className="fa-solid fa-thumbs-down"></i>1.6k</div>
+                                <div className="Comment"><i className="fa-solid fa-comment"></i>365</div>
                             </div>                        
                    </div>
 
