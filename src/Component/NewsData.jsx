@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-import { Loader } from './Loader';
-import './DarkMode.css';
+import { Loader } from '../Common/Loader';
+import '../Common/DarkMode.css';
 import './Style.css';
 
 
@@ -58,7 +58,13 @@ export default function NewsData() {
                             <div className="article_details">
                                 <p>{item.author}</p>
                                 <p>{item.publishedAt}</p>
-                            </div>                          
+                            </div>
+
+                            <div className="btns">
+                                <div className="like"><i class="fa-solid fa-thumbs-up"></i>8.2k</div>
+                                <div className="dislike"><i class="fa-solid fa-thumbs-down"></i>1.6k</div>
+                                <div className="Comment"><i class="fa-solid fa-comment"></i>365</div>
+                            </div>                        
                    </div>
 
                 )

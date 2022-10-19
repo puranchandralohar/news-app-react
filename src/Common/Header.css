@@ -48,10 +48,11 @@ body {
     width: auto;
     border: 1px solid #ccc;
     outline: none;
+    border-radius: 30px;
   }
 
   .searchbar input:focus{
-    border:1px solid #000;
+    border:1px solid #333;
   }
 
 

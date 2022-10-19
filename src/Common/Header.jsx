@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import './Header.css'
+import { Link } from 'react-router-dom';
 
 export function Header() {
 
@@ -32,10 +33,10 @@ export function Header() {
         </div>
         <button className='themeBtn' onClick={toggleTheme}><i class={"fa-solid fa-"+themeIcon}></i></button>
         <ul className="nav">
-          <li><a href="/">Headlines</a></li> 
-          <li><a href="/">ePaper</a></li> 
-          <li><a href="/">About</a></li> 
-          <li><a href="/">Contact</a></li> 
+          <li><Link to="/">Headlines</Link></li> 
+          <li><Link to ="/epaper">ePaper</Link></li> 
+          <li><Link to = "/About">About</Link></li> 
+          <li><Link to = "/Contact">Contact</Link></li> 
         </ul>
         <button className='login btn'>Login</button>
       </nav>
