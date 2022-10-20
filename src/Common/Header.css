@@ -38,10 +38,11 @@ body {
   .navbar{
     display: flex;
     align-items: baseline;
+    justify-content: center;
   }
 
   .navbar .searchbar{
-    margin-right:auto;
+    margin-right:2.5em;
   }
   
   .searchbar input{
@@ -57,20 +58,16 @@ body {
   }
 
 
-  
-  .navbar ul, 
-  .navbar li {
-    margin: 0; 
-    padding: 0;
-  }
-  
-  .navbar li {
-    display: inline-block;
-    margin: 1.4em 1em 1em 1em;
+
+  .nav{
+    display: flex;
+    position: relative;
+    gap:0.3em;
   }
 
-  .navbar a:hover{
-    color:blue;
+  .nav li {
+    list-style: none;
+    padding: 1em;
   }
 
   .btn{

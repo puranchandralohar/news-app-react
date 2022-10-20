@@ -33,7 +33,8 @@ export function Headlines() {
         toggleTheme={toggleTheme}
       />
       <NewsData 
-      value={value} 
+      value={value}
+      theme={theme} 
       handleText={handleText}
       setvalue = {setvalue} 
       />

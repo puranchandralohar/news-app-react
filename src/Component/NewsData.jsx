@@ -9,7 +9,7 @@ import Comments from './Comments';
 
 
 
-export default function NewsData({value}) {
+export default function NewsData({value,theme}) {
 
 
     const [data,setData] = useState([]);
@@ -51,7 +51,7 @@ export default function NewsData({value}) {
 
 
   return (
-    <section className="container">
+    <section className={"container " + theme}>
         <h1>Latest News</h1>
         { !loading ? <Loader/> : ""}
         <div className='articles'>

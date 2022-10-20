@@ -1,6 +1,6 @@
 .dark {
-    background-color: #131417;
-    color: #fff;
+    background-color:  #15202b;
+    color:#8899a6;
   }
 
   .dark a{
@@ -9,7 +9,6 @@
 
   .light {
     background-color: #fff;
-    color: #131417;
   }
 
   .header_light{
@@ -30,7 +29,9 @@
     padding: 10px;
     font-size: 18px;
     border:none;
-    box-shadow: 0 0 4px gray;
+    outline: none;
+    color:#b0b3b8;
+    box-shadow: 0 0 3px gray;
     border-radius: 75% 25%;
     background:transparent;
     cursor: pointer;
