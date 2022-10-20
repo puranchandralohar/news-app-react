@@ -5,6 +5,9 @@ export function About() {
   return (
     <>
         <Header/>
+        <div className="about_section">
+          Updated Soon......
+        </div>
     </>
   )
 }

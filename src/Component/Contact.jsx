@@ -5,6 +5,9 @@ export function Contact() {
   return (
     <>
         <Header/>
+        <div className="contact_section">
+          Updated Soon....
+        </div>
     </>
   )
 }

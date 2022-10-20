@@ -5,6 +5,9 @@ export function Epaper() {
   return (
     <>
         <Header/>
+        <div className="epaper_section">
+          Updated Soon...
+        </div>
     </>
   )
 }
