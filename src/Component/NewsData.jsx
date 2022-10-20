@@ -8,16 +8,14 @@ import { Headlines } from './Headlines';
 
 
 
-export default function NewsData(props) {
-    const {handleText,value} = props;
-
-    console.log(value)
+export default function NewsData({value}) {
 
 
     const [data,setData] = useState([]);
     const [loading, setLoading] = useState(false);
-
-
+    const [filteredData, setFilteredData] = useState([]);
+    
+    
     useEffect(()=>{
         axios
             .get(`https://newsapi.org/v2/everything?q=keyword&apiKey=3064d88d2d1345a7915d57781a10a49e`)
@@ -25,18 +23,28 @@ export default function NewsData(props) {
                
                 let result = response.data.articles;
                 setData([...data,...result]);
+                setFilteredData([...data,...result])
                 setLoading(true)
-                // console.log(result)
             })
     },[])
 
 
+    useEffect(()=>{
+        const afterFiltered = filteredData.filter((ele)=>{
+            if(ele.title){
+                return ele.title.includes(value.toLowerCase());
+            }
+        });
+        setFilteredData(afterFiltered);
+    },[value]);
+
+
     //Delete an article
     function deleteArticle(index) {
-        const newData = data.filter((ele, id) => {
+        const newData = filteredData.filter((ele, id) => {
             return index !== id;
         });
-        setData(newData);
+        setFilteredData(newData);
     }
 
 
@@ -46,7 +54,7 @@ export default function NewsData(props) {
         { !loading ? <Loader/> : ""}
         <div className='articles'>
     
-        {data.map((item,index)=>{
+        {filteredData.map((item,index)=>{
                 return(
                     <div className='article' key={index} >
                             <button className='delete_btn' onClick={()=>deleteArticle(index)}>

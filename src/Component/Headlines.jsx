@@ -6,6 +6,8 @@ export function Headlines() {
   const [theme, setTheme] = useState("light");
   const [themeIcon, setThemeIcon] = useState("moon");
   const [value, setvalue] = useState("");
+  
+
 
   const toggleTheme = () => {
     if (theme === "light") {
@@ -19,7 +21,6 @@ export function Headlines() {
 
   const handleText = (e) => {
     setvalue(e.target.value);
-    // console.log(e.target.value)
   };
 
   return (
@@ -33,7 +34,8 @@ export function Headlines() {
       />
       <NewsData 
       value={value} 
-      handleText={handleText} 
+      handleText={handleText}
+      setvalue = {setvalue} 
       />
     </>
   );
