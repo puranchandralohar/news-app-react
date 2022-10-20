@@ -5,6 +5,7 @@ import '../Common/DarkMode.css';
 import './Style.css';
 import { Headlines } from './Headlines';
 import { LikeCounter } from './LikeCounter';
+import Comments from './Comments';
 
 
 
@@ -80,6 +81,7 @@ export default function NewsData({value}) {
                             </div>
 
                             <LikeCounter />
+                            <Comments />
                      
                    </div>
 
