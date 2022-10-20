@@ -7,18 +7,75 @@
   } */
 
 footer {
-    padding: 1.2em;
+    padding: 2em;
     background: #333;
     color: #eee;
 }
 
-footer p{ 
-    margin:5px;
-    text-align: center;
+.footer_row{
+    display: flex;
+    flex-direction: column;
 }
 
-footer .fa-heart{
-    margin: 0 2px;
+.footer_left .footer_links{
+    display: flex;
+    gap:10px;
+}
+
+.footer_links a,
+.footer_right a{
+    padding: 10px;
+    color:#eee;
+    transition: 0.5s;
+    
+}
+
+.footer_links a:hover{
+    background-color: #1e1e1e;
+}
+
+.footer_right{
+    display: flex;
+    gap:10px;
+}
+
+.footer_right a{
+    font-size: 1.2em;
+    transition: 0.6s;
+}
+
+.footer_right .fa-facebook:hover{
+    color:#3b5998;
+}
+.footer_right .fa-twitter:hover{
+    color:#55acee;
+}
+.footer_right .fa-instagram:hover{
+    color:#c32aa3;
+}
+.footer_right .fa-linkedin:hover{
+    color:#0a66c2;
+}
+.footer_right .fa-github:hover{
+    color:#ad5c51;
+}
+.footer_right .fa-slack:hover{
+    color:#4a154b
+}
+
+.footer_bottom{
+    background-color: #1e1e1e;
+    padding: 0.5em 2em;
+}
+
+
+.footer_bottom p{ 
+    padding:5px;
+    color:#eee;
+}
+
+.footer_bottom .fa-heart{
+    padding: 0 2px;
     color:red;
     animation: blink 0.9s infinite;
 }
