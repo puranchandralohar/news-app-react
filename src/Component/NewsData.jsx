@@ -3,8 +3,8 @@ import axios from 'axios';
 import { Loader } from '../Common/Loader';
 import '../Common/DarkMode.css';
 import './Style.css';
-import '../Common/DarkMode.css'
 import { Headlines } from './Headlines';
+import { LikeCounter } from './LikeCounter';
 
 
 
@@ -16,6 +16,7 @@ export default function NewsData({value}) {
     const [filteredData, setFilteredData] = useState([]);
     
     
+
     useEffect(()=>{
         axios
             .get(`https://newsapi.org/v2/everything?q=keyword&apiKey=3064d88d2d1345a7915d57781a10a49e`)
@@ -78,11 +79,7 @@ export default function NewsData({value}) {
                                 <p>{item.publishedAt}</p>
                             </div>
 
-                            <div className="btns">
-                                <div className="like cta_btn"><i className="fa-solid fa-thumbs-up"></i>8.2k</div>
-                                <div className="dislike cta_btn"><i className="fa-solid fa-thumbs-down"></i>1.6k</div>
-                                <div className="Comment cta_btn"><i className="fa-solid fa-comment"></i>365</div>
-                            </div>
+                            <LikeCounter />
                      
                    </div>
 

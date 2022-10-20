@@ -60,10 +60,20 @@
     font-size: 1.2em;
     cursor: pointer;
     color:gray;
+    border:none;
+    background: none;
+    outline:none;
+    transition: 0.5s;
 }
 
-.fa-thumbs-up:active ,
-.fa-thumbs-down:active,
-.fa-comment:active{
-    color:red;
+.like:active{
+    transform: scale(1.2);
+    color:red
+    
 }
+.dislike:active{
+    transform: scale(0.8);
+    color:blue;
+}
+
+
