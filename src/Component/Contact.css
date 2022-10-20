@@ -1,0 +1,48 @@
+
+.contact_section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.contactForm{
+    padding: 1.5em;
+    box-shadow: 0 0 5px #808080;
+    height: 80%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:baseline;
+    gap:1em;
+    border-radius: 0.4em;
+
+}
+
+.contactForm .titles{
+    text-align: justify;
+}
+
+.form_elements input,textarea{
+    padding: 1em;
+    border:1px solid #bbb;
+    width: 100%;
+    outline: none;
+}
+
+.send_btn{
+    padding: 0.8em 1em;
+    background-color: green;
+    color:#fff;
+    border:none;
+    outline:none;
+    cursor: pointer;
+    border-radius: 0.4em;
+    opacity: 0.8;
+
+}
+
+.send_btn:hover{
+    opacity: 1;
+}
