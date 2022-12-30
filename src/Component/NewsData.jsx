@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { Loader } from '../Common/Loader';
-import '../Common/DarkMode.css';
-import './Style.css';
-import { Headlines } from './Headlines';
 import { LikeCounter } from './LikeCounter';
 import Comments from './Comments';
+
+import './Style.css';
+import '../Common/DarkMode.css';
 
 
 
@@ -28,7 +28,7 @@ export default function NewsData({value,theme}) {
                 setFilteredData([...data,...result])
                 setLoading(true)
             })
-    },[])
+    })
 
 
     useEffect(()=>{
