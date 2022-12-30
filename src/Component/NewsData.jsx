@@ -5,7 +5,7 @@ import { LikeCounter } from './LikeCounter';
 import Comments from './Comments';
 
 import './Style.css';
-import '../Common/DarkMode.css';
+import '../Common/darkmode.css';
 
 
 
