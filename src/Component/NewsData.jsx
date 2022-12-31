@@ -28,7 +28,7 @@ export default function NewsData({value,theme}) {
                 setFilteredData([...data,...result])
                 setLoading(true)
             })
-    })
+    },[])
 
 
     useEffect(()=>{
