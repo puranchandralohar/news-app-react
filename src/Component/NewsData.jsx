@@ -34,7 +34,7 @@ export default function NewsData({value,theme}) {
     useEffect(()=>{
         const afterFiltered = filteredData.filter((ele)=>{
             if(ele.title){
-                return ele.title.includes(value.toLowerCase());
+                return ele.title.toLowerCase().includes(value.toLowerCase());
             }
         });
         setFilteredData(afterFiltered);
