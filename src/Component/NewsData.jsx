@@ -20,7 +20,7 @@ export default function NewsData({value,theme}) {
 
     useEffect(()=>{
         axios
-            .get(`https://newsapi.org/v2/everything?q=keyword&apiKey=3064d88d2d1345a7915d57781a10a49e`)
+            .get(`https://raw.githubusercontent.com/puranchandralohar/apis/main/newsdata`)
             .then((response)=>{
                
                 let result = response.data.articles;
